@@ -1,0 +1,12 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.99);
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 10rem 0;
+
+  &__copyright {
+    display: inline-block;
+    margin: 5rem 0;
+
+  }
+}

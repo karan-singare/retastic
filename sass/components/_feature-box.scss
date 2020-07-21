@@ -1,0 +1,72 @@
+.feature-box {
+  // background-color: rgba($color-white, .8);
+  font-size: 1.3rem;
+
+  padding: 2rem;
+  text-align: center;
+  border-radius: .3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  transition: transform .3s;
+  height: 36rem;
+
+  color: $color-white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  /*here the icon is a font icon so font properties will be applicable on it,*/
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    line-height: 1;
+
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8));
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+
+  &--1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(transparent, 0.6),
+      rgba(transparent, 0.6)),
+    url('../images/about-1.jpg');
+  }
+  &--2 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(transparent, 0.6),
+      rgba(transparent, 0.6)),
+    url('../images/about-2.jpg');
+  }
+  &--3 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(transparent, 0.6),
+      rgba(transparent, 0.6)),
+    url('../images/about-3.jpg');
+  }
+  &--4 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(transparent, 0.6),
+      rgba(transparent, 0.6)),
+    url('../images/about-4.jpg');
+  }
+}

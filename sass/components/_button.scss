@@ -1,0 +1,99 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    /* inline element is treated as if it is text, hence the properties of text can be applied to it */
+    border-radius: 10rem; /*high values make the border-radius circular*/
+    transition: all .2s;
+    position: relative;
+    font-size: $default-font-size;
+
+    /*changes for the button*/
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+  }
+
+  /*when button is clicked*/
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom .3s ease-out .75s;
+    /* styles of 0% will automatically apply before the animation starts */
+    animation-fill-mode: backwards;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  /* style will applied to after element when the btn is hovered*/
+  &:hover{
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: .3rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    transform: translateY(-.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    transform: translateY(0);
+  }
+}
