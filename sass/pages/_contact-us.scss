@@ -1,0 +1,16 @@
+.contact-us {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(transparent, 0.6),
+    rgba(transparent, 0.6)),
+  url('../images/feature-bg.jpg');
+  background-size: cover;
+
+  color: $color-white;
+
+  padding: 10rem 0;
+
+  main .row {
+    margin-bottom: 0!important;
+  }
+}

@@ -59,7 +59,7 @@ body {
   font-weight: 700;
 
   /*applying the linear gradient on text*/
-  display: inline-block;
+  display: block;
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   -webkit-background-clip: text; /*background get clipped exactly where the text is*/
   color: transparent;

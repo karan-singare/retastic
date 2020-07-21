@@ -7,4 +7,9 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php
+
+  <?php if (!is_front_page()): ?>
+    <header class="page-header">
+
+    </header>
+  <?php endif; ?>
