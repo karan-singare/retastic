@@ -1,0 +1,12 @@
+.widgets-bg {
+  &__dark {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(transparent, 0.6),
+      rgba(transparent, 0.6));
+  }
+}
+
+.widgets-area {
+  padding: 1rem 2rem;
+}

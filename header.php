@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 
   <?php if (!is_front_page()): ?>
-    <header class="page-header">
+    <!-- <header class="page-header">
 
-    </header>
+    </header> -->
   <?php endif; ?>

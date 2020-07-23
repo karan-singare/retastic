@@ -4,9 +4,6 @@
 <?php get_header(); ?>
 
 <?php get_template_part('partials/navigation'); ?>
-  <!-- <div class="media__container">
-    <img src="<?php echo get_template_directory_uri() . '/images/about-us-1.jpg' ?>" alt="" class="media">
-  </div> -->
 
 
   <main class="about-us">
@@ -108,7 +105,7 @@
 
       </div>
       <div class="col-1-of-3">
-        <!-- sidebar will go here-->
+        <?php get_sidebar(); ?>
       </div>
     </div>
 

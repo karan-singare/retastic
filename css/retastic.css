@@ -82,7 +82,6 @@ body {
   box-sizing: border-box; }
 
 .heading__primary {
-  color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
   /* used to fix the shaking caused by the animation if it is there */
@@ -553,8 +552,7 @@ body {
     .form__input:focus:invalid {
       border-bottom: 0.3rem solid #ff7730; }
     .form__input::-webkit-input-placeholder {
-      color: #999;
-      color: #000; }
+      color: #333; }
   .form__label {
     font-size: 1.2rem;
     font-weight: 700;
@@ -601,6 +599,85 @@ body {
       background-color: #7ed56f;
       opacity: 0; }
   .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1; }
+
+.section-book .form {
+  /**
+     * input elements don't inherit font-family
+     */
+  /*sibling selector*/
+  /*general sibling selector (adjacet sibling is also  general sibling)*/ }
+  .section-book .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .section-book .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    color: #000;
+    padding: 1.5rem 2rem;
+    border-radius: .2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: .3rem solid transparent;
+    width: 90%;
+    transition: all .3s; }
+    @media (max-width: 56.25em) {
+      .section-book .form__input {
+        width: 100%; } }
+    .section-book .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 0.3rem solid #7ed56f; }
+    .section-book .form__input:focus:invalid {
+      border-bottom: 0.3rem solid #ff7730; }
+    .section-book .form__input::-webkit-input-placeholder {
+      color: #333; }
+  .section-book .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .2s; }
+  .section-book .form__input:placeholder-shown + .section-book .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .section-book .form__radio-group {
+    width: 40%;
+    display: inline-block; }
+    @media (max-width: 56.25em) {
+      .section-book .form__radio-group {
+        width: 100%;
+        margin-bottom: 2rem; } }
+  .section-book .form__radio-input {
+    display: none; }
+  .section-book .form__radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5rem; }
+  .section-book .form__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid #7ed56f;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -.8rem;
+    left: 0; }
+    .section-book .form__radio-button::after {
+      content: "";
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #7ed56f;
+      opacity: 0; }
+  .section-book .form__radio-input:checked ~ .section-book .form__radio-label .section-book .form__radio-button::after {
     opacity: 1; }
 
 .row {
@@ -687,7 +764,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: radial-gradient(rgba(13, 15, 59, 0.92), rgba(13, 15, 59, 0.92));
+  background-image: radial-gradient(#55c57a, #28b485);
   z-index: 100;
   transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1); }
   @media (max-width: 56.25em) {
@@ -730,7 +807,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-  background-size: 225%;
+  background-size: 235%;
   transition: all .4s; }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1rem;
@@ -828,6 +905,12 @@ body {
       height: 100%;
       width: 50%; }
 
+.widgets-bg__dark {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); }
+
+.widgets-area {
+  padding: 1rem 2rem; }
+
 .footer {
   background-color: rgba(0, 0, 0, 0.99);
   text-align: center;
@@ -883,8 +966,7 @@ body {
 
 .section-book {
   padding: 15rem 0rem;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8));
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/form-2.jpg"); }
+  background-color: #f7f7f7; }
   .section-book .heading__secondary {
     font-size: 3rem; }
   @media (max-width: 56.25em) {
@@ -903,7 +985,7 @@ body {
       background-size: cover; } }
   @media (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%);
       background-size: cover; } }
   .book__form {
     width: 50%;
@@ -913,6 +995,25 @@ body {
         width: 65%; } }
     @media (max-width: 56.25em) {
       .book__form {
+        width: 100%; } }
+
+.contact-us .book {
+  background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 50%), url("../images/form-1.jpg"); }
+  @media (max-width: 75em) {
+    .contact-us .book {
+      background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 65%), url("../images/form-1.jpg");
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .contact-us .book {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%);
+      background-size: cover; } }
+  .contact-us .book__form {
+    width: 60%; }
+    @media (max-width: 75em) {
+      .contact-us .book__form {
+        width: 75%; } }
+    @media (max-width: 56.25em) {
+      .contact-us .book__form {
         width: 100%; } }
 
 main {
@@ -931,17 +1032,17 @@ main {
   object-fit: cover;
   object-position: top; }
 
-.about-us ul, main ul {
+.about-us ul {
   padding-left: 2rem; }
 
-.about-us .heading__tertiary, main .heading__tertiary {
+.about-us .heading__tertiary {
   margin: 2rem 0; }
 
-.about-us .row, main .row {
+.about-us .row {
   margin-top: 8rem;
   margin-bottom: 8rem; }
 
-.about-us .main-list, main .main-list {
+.about-us .main-list {
   list-style-type: none; }
 
 .contact-us {
@@ -951,3 +1052,37 @@ main {
   padding: 10rem 0; }
   .contact-us main .row {
     margin-bottom: 0 !important; }
+
+.single .row {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  /*general elements*/ }
+  .single .row .heading__primary {
+    margin-bottom: 3rem; }
+  .single .row .page__content {
+    line-height: 1.4; }
+  .single .row h2 {
+    margin: 2rem 0; }
+  .single .row img {
+    display: inline-block;
+    margin: 1rem 0; }
+  .single .row ul {
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem; }
+
+.blogs-page .row:first-child {
+  margin-top: 4rem; }
+
+.blogs-page .row:last-child {
+  margin-bottom: 4rem; }
+
+.blogs-page .row h2 {
+  margin: 2rem 0; }
+
+.blogs-page .row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; }
+  .blogs-page .row img:not(last-child) {
+    margin-bottom: 1rem; }

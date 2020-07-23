@@ -9,12 +9,26 @@
   </div>
 
   <nav class="navigation__nav">
-    <ul class="navigation__list">
+
+    <?php
+      $args = [
+        'theme_location' => 'primary',
+        'container' => false,
+        'menu_class' => 'navigation__list',
+      ];
+
+      wp_nav_menu($args);
+
+
+     ?>
+    <!-- <ul class="navigation__list">
       <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> About Natours</a></li>
       <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> your benefits</a></li>
       <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> popular tours</a></li>
       <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span> stories</a></li>
       <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span> book now</a></li>
-    </ul>
+    </ul> -->
+
+
   </nav>
 </div>
