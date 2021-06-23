@@ -8,13 +8,13 @@ var reload = browserSync.reload;
 
 function style() {
   return gulp
-    .src(["./assets/sass/main.scss", "./assets/sass/**/*.scss"])
+    .src(["./sass/main.scss", "./sass/**/*.scss"])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(autoprefixer({ browsers: ['last 5 versions'], cascade: false }))
-    .pipe(concat("styles.css"))
+    .pipe(concat("retastic.css"))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest("./assets/css"))
+    .pipe(gulp.dest("./css"))
     .pipe(reload({stream: true}));
 }
 
@@ -24,9 +24,9 @@ function watch() {
     proxy: 'http://opusonedesignbuild.local/',
     notify: true
   });
-  gulp.watch('./assets/sass/**/*.scss', style);
+  gulp.watch('./sass/**/*.scss', style);
   gulp.watch('./**/*.php', php);
-  gulp.watch('./assets/js/script.js', js);
+  gulp.watch('./js/script.js', js);
 }
 
 function php() {

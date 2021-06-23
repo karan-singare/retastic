@@ -17,6 +17,12 @@
             Opus operates offices in the US and Canada. We strive to exceed our client’s needs wherever they are, regardless of location. Use the contact form on this page to reach us.
           </p>
 
+
+          <?php echo do_shortcode("[fluentform id='2']"); ?>
+
+          <br><br><br><br>
+
+
           <div class="book">
           <div class="book__form">
             <form class="form">
