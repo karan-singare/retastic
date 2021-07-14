@@ -801,7 +801,6 @@ body {
  * blend mode of background are properties which defines how the different background images are blended
  */
 .story {
-  width: 75%;
   margin: 0 auto;
   -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -811,9 +810,6 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
-  -webkit-transform: skewX(-12deg);
-  -ms-transform: skewX(-12deg);
-  transform: skewX(-12deg);
   border: 1px solid #fff;
   /**
    * shape-outside: makes the content float in a particular shape using this property
@@ -831,57 +827,23 @@ body {
   }
 }
 
-@media (max-width: 37.5em) {
-  .story {
-    -webkit-transform: skewX(0deg);
-    -ms-transform: skewX(0deg);
-    transform: skewX(0deg);
-  }
-}
-
 .story__shape {
   width: 15rem;
   height: 15rem;
   float: left;
+  margin: 0;
+  margin-right: 2rem;
   shape-outside: circle(50% at 50% 50%);
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  -webkit-transform: translateX(-3rem) skewX(12deg);
-  -ms-transform: translateX(-3rem) skewX(12deg);
-  transform: translateX(-3rem) skewX(12deg);
   position: relative;
-}
-
-@media (max-width: 37.5em) {
-  .story__shape {
-    -webkit-transform: translateX(-3rem) skewX(0deg);
-    -ms-transform: translateX(-3rem) skewX(0deg);
-    transform: translateX(-3rem) skewX(0deg);
-  }
 }
 
 .story__img {
   height: 100%;
-  -webkit-transform: translateX(-4rem) scale(1.4);
-  -ms-transform: translateX(-4rem) scale(1.4);
-  transform: translateX(-4rem) scale(1.4);
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
-}
-
-.story__text {
-  -webkit-transform: skewX(12deg);
-  -ms-transform: skewX(12deg);
-  transform: skewX(12deg);
-}
-
-@media (max-width: 37.5em) {
-  .story__text {
-    -webkit-transform: skewX(0deg);
-    -ms-transform: skewX(0deg);
-    transform: skewX(0deg);
-  }
 }
 
 .story__caption {
@@ -891,7 +853,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   /*animation part*/
   -webkit-transform: translate(-50%, 20%);
   -ms-transform: translate(-50%, 20%);
@@ -910,9 +872,6 @@ body {
 }
 
 .story:hover .story__img {
-  -webkit-transform: translateX(-4rem) scale(1);
-  -ms-transform: translateX(-4rem) scale(1);
-  transform: translateX(-4rem) scale(1);
   -webkit-filter: blur(0.2rem) brightness(80%);
   filter: blur(0.2rem) brightness(80%);
 }
@@ -1622,6 +1581,18 @@ figure {
 
 ul {
   padding-left: 5rem;
+}
+
+.testimonials {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/stories-bg.jpg");
+  background-image: -o-linear-gradient(left top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/stories-bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/stories-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonials .story {
+  margin-bottom: 3rem;
 }
 
 .widgets-bg__dark {

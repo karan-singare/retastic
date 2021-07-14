@@ -1,5 +1,5 @@
 .story {
-  width: 75%;
+  // width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
   // background-color: rgba($color-white, .6);
@@ -9,7 +9,7 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  transform: skewX(-12deg);
+  // transform: skewX(-12deg);
 
   border: 1px solid $color-white;
 
@@ -17,10 +17,6 @@
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
-  }
-
-  @include respond(phone) {
-    transform: skewX(0deg);
   }
 
   /**
@@ -33,30 +29,22 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
+    margin: 0;
+    margin-right: 2rem;
 
+    shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
     position: relative;
 
-    @include respond(phone) {
-      transform: translateX(-3rem) skewX(0deg);
-    }
   }
 
   &__img {
     height: 100%;
-    transform: translateX(-4rem) scale(1.4);
+    // transform: translateX(-4rem) scale(1.4);
     transition: all .5s;
   }
 
-  &__text {
-    transform: skewX(12deg);
 
-    @include respond(phone) {
-      transform: skewX(0deg);
-    }
-  }
 
   &__caption {
     position: absolute;
@@ -65,7 +53,7 @@
     color: $color-white;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     /*animation part*/
     transform: translate(-50%, 20%);
     opacity: 0;
@@ -78,7 +66,7 @@
   }
 
   &:hover &__img {
-    transform: translateX(-4rem) scale(1);
+    // transform: translateX(-4rem) scale(1);
     filter: blur(.2rem) brightness(80%);
   }
 

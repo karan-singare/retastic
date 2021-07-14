@@ -39,3 +39,18 @@ figure {
 ul {
   padding-left: 5rem;
 }
+
+.testimonials {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(transparent, 0.6),
+    rgba(transparent, 0.6)),
+  url('../images/stories-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .story {
+    margin-bottom: 3rem;
+  }
+
+}
