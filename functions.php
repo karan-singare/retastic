@@ -82,7 +82,42 @@ function retatstic_custom_post_type() {
     'exclude_from_search' => false,
   ];
 
+  $testimonial_labels = [
+    'name' => 'Testimonials',
+    'singular_name' => 'Testimonial',
+    'add_new' => 'Add Testimonial',
+    'all_items' => 'All Testimonials',
+    'edit_item' => 'Edit Testimonial',
+    'new_item' => 'New Testimonial',
+    'view_item' => 'View Testimonial',
+    'search_item' => 'Search Testimonialn',
+    'not_found' => 'No items found in trash',
+    'not_found_in_trash' => 'No items found in trash',
+    'parent_item_colon' => 'Parent Testimonial',
+  ];
+  $testimonial_args = [
+    'labels' => $testimonial_labels,
+    'public' => true,
+    'has_archive' => true,
+    'publicly_queryable' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => [
+      'title',
+      'editor',
+      'excerpt',
+      'thumbnail',
+      'revisions',
+    ],
+    'taxonomies' => ['category', 'post_tags'],
+    'menu_position' => 5,
+    'exclude_from_search' => false,
+  ];
+
   register_post_type('division', $args);
+  register_post_type('testimonial', $testimonial_args);
 }
 
 add_action('init', 'retatstic_custom_post_type');

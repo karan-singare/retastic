@@ -1634,6 +1634,22 @@ ul {
   padding: 1rem 2rem;
 }
 
+.sidebar-form {
+  padding: 1.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../images/about-bg.jpg);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../images/about-bg.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../images/about-bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-form label {
+  color: #fff;
+}
+
 .footer {
   background-color: rgba(0, 0, 0, 0.99);
   text-align: center;

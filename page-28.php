@@ -12,7 +12,7 @@
   <main class="service">
 
     <div class="row">
-      <div class="col-3-of-4">
+      <div class="col-2-of-3">
 
         <?php if (have_posts()): ?>
           <?php $count=0; while( have_posts() ): the_post(); $count++; ?>
@@ -25,8 +25,8 @@
         <?php endif; ?>
 
       </div>
-      <div class="col-1-of-4">
-        <p>Region for the siderbar</p>
+      <div class="col-1-of-3">
+        <?php echo do_shortcode("[fluentform id='2']"); ?>
       </div>
     </div>
 

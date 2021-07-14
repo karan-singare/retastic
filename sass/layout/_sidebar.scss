@@ -10,3 +10,16 @@
 .widgets-area {
   padding: 1rem 2rem;
 }
+
+.sidebar-form {
+  padding: 1.5rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../images/about-bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: .3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+
+  label {
+    color: #fff;
+  }
+}

@@ -5,6 +5,8 @@ jQuery(document).ready(function($) {
    * Adding styles to the fluentform (Form on the homepage)
    */
   // Form Wrapper
+
+
   $('div[class*="fluentform_wrapper_"]').addClass('book');
   const fluentform_wrapper_content = $('div[class*="fluentform_wrapper_"]').addClass('book').html();
   const new_fluentform_wrapper_content = "<div class='book__form'>" + fluentform_wrapper_content + "</div>";
@@ -42,7 +44,12 @@ jQuery(document).ready(function($) {
   $('.page .service .content h2').addClass('heading__secondary');
   // console.log($('.page .service .content '));
 
+  if (location.pathname === '/' || location.pathname === '/contact-us/') {
 
+  } else {
+    $('div[class*="fluentform_wrapper_"]').removeClass('book').addClass('sidebar-form');
+    const fluentform_wrapper_content = $('div[class*="fluentform_wrapper_"] .book__form').html();
+    $('div[class*="fluentform_wrapper_"]').html(fluentform_wrapper_content);
+  }
 
-  // $('.navigation__list a').addClass('navigation__link');
 });
