@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
    <?php //get_template_part(get_template_directory_uri() . '/partials/navigation'); ?>
-   <?php get_template_part('partials/navigation'); ?>
+   <?php //get_template_part('partials/navigation'); ?>
    <?php get_template_part('partials/header'); ?>
 
    <main>

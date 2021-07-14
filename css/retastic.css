@@ -266,6 +266,10 @@ body {
   text-align: center !important;
 }
 
+.u-left-text {
+  text-align: left !important;
+}
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
 }
@@ -580,7 +584,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/about-4.jpg");
 }
 
-.card {
+.custom-card {
   -webkit-perspective: 115rem;
   perspective: 115rem;
   position: relative;
@@ -590,7 +594,7 @@ body {
   /* .card:hover .card__side */
 }
 
-.card__side {
+.custom-card__side {
   height: 52rem;
   -webkit-transition: all .8s ease;
   -o-transition: all .8s ease;
@@ -608,36 +612,36 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-.card__side--front {
+.custom-card__side--front {
   background-color: #fff;
   color: #000000;
 }
 
-.card__side--back {
+.custom-card__side--back {
   background-color: green;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-.card__side--back--1 {
+.custom-card__side--back--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
   background-image: -o-linear-gradient(left top, #ffb900, #ff7730);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 
-.card__side--back--2 {
+.custom-card__side--back--2 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#55c57a), to(#28b485));
   background-image: -o-linear-gradient(left top, #55c57a, #28b485);
   background-image: linear-gradient(to right bottom, #55c57a, #28b485);
 }
 
-.card__side--back--3 {
+.custom-card__side--back--3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
   background-image: -o-linear-gradient(left top, #2998ff, #5643fa);
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 
-.card__picture {
+.custom-card__picture {
   background-size: cover;
   height: 23rem;
   background-blend-mode: color-burn;
@@ -645,25 +649,25 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.card__picture--1 {
+.custom-card__picture--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../images/about-1.jpg);
   background-image: -o-linear-gradient(left top, #ffb900, #ff7730), url(../images/about-1.jpg);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../images/about-1.jpg);
 }
 
-.card__picture--2 {
+.custom-card__picture--2 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#55c57a), to(#28b485)), url(../images/about-2.jpg);
   background-image: -o-linear-gradient(left top, #55c57a, #28b485), url(../images/about-2.jpg);
   background-image: linear-gradient(to right bottom, #55c57a, #28b485), url(../images/about-2.jpg);
 }
 
-.card__picture--3 {
+.custom-card__picture--3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../images/about-3.jpg);
   background-image: -o-linear-gradient(left top, #2998ff, #5643fa), url(../images/about-3.jpg);
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../images/about-3.jpg);
 }
 
-.card__heading {
+.custom-card__heading {
   color: #fff;
   font-size: 2.2rem;
   font-weight: 300;
@@ -675,36 +679,37 @@ body {
   width: 75%;
 }
 
-.card__heading-span {
+.custom-card__heading-span {
   padding: 1rem 1.5rem;
+  line-height: 1.8;
   /*if an element breaks into two then both the parts behave like separate elements having same styles*/
   -webkit-box-decoration-break: clone;
 }
 
-.card__heading-span--1 {
+.custom-card__heading-span--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.95)), to(rgba(255, 119, 48, 0.95)));
   background-image: -o-linear-gradient(left top, rgba(255, 185, 0, 0.95), rgba(255, 119, 48, 0.95));
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.95), rgba(255, 119, 48, 0.95));
 }
 
-.card__heading-span--2 {
+.custom-card__heading-span--2 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.95)), to(rgba(40, 180, 133, 0.95)));
   background-image: -o-linear-gradient(left top, rgba(85, 197, 122, 0.95), rgba(40, 180, 133, 0.95));
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.95), rgba(40, 180, 133, 0.95));
 }
 
-.card__heading-span--3 {
+.custom-card__heading-span--3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.95)), to(rgba(86, 67, 250, 0.95)));
   background-image: -o-linear-gradient(left top, rgba(41, 152, 255, 0.95), rgba(86, 67, 250, 0.95));
   background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.95), rgba(86, 67, 250, 0.95));
 }
 
-.card__details {
+.custom-card__details {
   padding: 3rem;
   font-size: 1.2rem;
 }
 
-.card__cta {
+.custom-card__cta {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -713,23 +718,23 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.card__price-box {
+.custom-card__price-box {
   text-align: center;
   margin-bottom: 8rem;
   color: #fff;
 }
 
-.card__price-only {
+.custom-card__price-only {
   font-size: 1.4rem;
 }
 
-.card__price-value {
+.custom-card__price-value {
   font-size: 6rem;
   font-weight: 100;
 }
 
 @media (max-width: 56.25em) {
-  .card {
+  .custom-card {
     height: auto;
     /*fix for breaking the noraml flow*/
     border-radius: .3rem;
@@ -739,26 +744,26 @@ body {
     /* when we hover the card apply css to card__side */
     /* .card:hover .card__side */
   }
-  .card__side {
+  .custom-card__side {
     height: auto;
     position: relative;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  .card__side--back {
+  .custom-card__side--back {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
-  .card__details {
+  .custom-card__details {
     padding: 1rem 3rem;
   }
-  .card:hover .card__side--front {
+  .custom-card:hover .custom-card__side--front {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
-  .card__cta {
+  .custom-card__cta {
     position: relative;
     top: 0%;
     left: 0%;
@@ -769,13 +774,13 @@ body {
     padding: 7rem 4rem 4rem 4rem;
     text-align: center;
   }
-  .card__price-box {
+  .custom-card__price-box {
     margin-bottom: 3rem;
   }
-  .card__price-only {
+  .custom-card__price-only {
     font-size: 1.4rem;
   }
-  .card__price-value {
+  .custom-card__price-value {
     font-size: 4rem;
   }
 }
@@ -1200,10 +1205,35 @@ body {
   padding: 1rem 2rem !important;
 }
 
+.slider-container {
+  position: relative;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slider-overlay .slider-title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.slider-overlay .slider-description {
+  font-size: 1.4rem;
+}
+
 .row {
   max-width: 114rem;
   /* trick to align center one block into another */
   margin: 0 auto;
+  display: block;
   /* selects everything except the last child */
   /**
    * if all the child elements of div are floating them
@@ -1545,6 +1575,53 @@ body {
   background: green;
   height: 100%;
   width: 50%;
+}
+
+.service {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.service .heading__secondary {
+  font-size: 2.4rem;
+}
+
+.service .heading__secondary:hover {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  text-shadow: none;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 1rem auto;
+}
+
+.wp-block-button {
+  text-transform: capitalize;
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+}
+
+.wp-block-button:hover {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.wp-block-button a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 5rem;
 }
 
 .widgets-bg__dark {

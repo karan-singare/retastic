@@ -1,0 +1,41 @@
+.service {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
+
+  .heading__secondary {
+    font-size: 2.4rem;
+    &:hover {
+      transform: none;
+      text-shadow: none;
+    }
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 1rem auto;
+}
+
+.wp-block-button {
+  text-transform: capitalize;
+  margin-top: 1rem;
+  margin-bottom: 1rem!important;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding-left: 5rem;
+}

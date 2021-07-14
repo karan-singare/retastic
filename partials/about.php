@@ -9,7 +9,7 @@
 
   <div class="row">
     <div class="col-1-of-2">
-      <p class="paragraph">
+      <p class="paragraph u-left-text">
         Opus One Design Build is an industry leader whose success and attention to detail has generated an unparalleled reputation as "The Construction Company That Consistently Outperforms The Competition".
           Delivering unwavering quality to our clients time and again, year after year, for nearly a decade. "Exceeding Your Expectations by Managing Them - Opus One Design Build - Follow The Leader"
       </p>

@@ -3,6 +3,7 @@
 
   /* trick to align center one block into another */
   margin: 0 auto;
+  display: block;
 
   /* selects everything except the last child */
   &:not(:last-child) {

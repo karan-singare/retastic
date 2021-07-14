@@ -36,10 +36,13 @@ jQuery(document).ready(function($) {
   `;
   $('div[class*="fluentform_wrapper_1"] form').prepend(form_heading);
 
+  /**
+   * Adding custom classes for content of the service pages
+   */
+  $('.page .service .content h2').addClass('heading__secondary');
+  // console.log($('.page .service .content '));
 
 
 
-
-
-  $('.navigation__list a').addClass('navigation__link');
+  // $('.navigation__list a').addClass('navigation__link');
 });
