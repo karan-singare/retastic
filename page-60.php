@@ -49,6 +49,11 @@
       <div class="col-1-of-3">
         <?php echo do_shortcode("[fluentform id='2']"); ?>
       </div>
+
+      
+
+
+
     </div>
 
     <?php wp_reset_postdata(); ?>

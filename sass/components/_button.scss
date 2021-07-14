@@ -43,7 +43,12 @@
 
     &::after {
       background-color: $color-primary;
+      color: #fff!important;
     }
+  }
+  &--black {
+    background-color: #000;
+    color: $color-white;
   }
 
   &--animated {
@@ -66,12 +71,12 @@
   }
 
   /* style will applied to after element when the btn is hovered*/
-  &:hover{
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
-  }
+  // &:hover{
+  //   &::after {
+  //     transform: scaleX(1.4) scaleY(1.6);
+  //     opacity: 0;
+  //   }
+  // }
 }
 
 .btn-text {
@@ -96,4 +101,10 @@
     box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     transform: translateY(0);
   }
+}
+.btn.btn--black:hover {
+  color: #000!important;
+}
+.btn.btn--green:hover {
+  color: #fff!important;
 }

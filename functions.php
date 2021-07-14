@@ -140,3 +140,42 @@ function retastic_widget_setup() {
   ]);
 }
 add_action('widgets_init', 'retastic_widget_setup');
+
+/**
+ * Helper functions
+ */
+
+function create_testimonial_sidebar_card() {
+  $args = array(
+    'post_type' => 'testimonial',
+    'post_status' => 'publish',
+    'orderby' => 'date',
+    'order' => 'ASC',
+    'posts_per_page' => 1,
+  );
+
+  $loop = new WP_Query( $args );
+  $output = "";
+
+  // while($loop->have_posts()) {
+  //   echo "hello";
+  // }
+
+  while ($loop->have_posts()) {
+    $url = the_post_thumbnail_url();
+    $author = the_excerpt();
+    $title = the_title();
+    $output = "
+      <div class='sidebar-testimonial'>
+        <img src='$url' alt='' />
+        <p>$title</p>
+        <p>$author</p>
+      </div>
+    ";
+  }
+
+  wp_reset_postdata();
+
+  return $output;
+
+}

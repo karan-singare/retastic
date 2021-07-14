@@ -358,6 +358,12 @@ body {
 
 .btn--green::after {
   background-color: #7ed56f;
+  color: #fff !important;
+}
+
+.btn--black {
+  background-color: #000;
+  color: #fff;
 }
 
 .btn--animated {
@@ -381,13 +387,6 @@ body {
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
-}
-
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-  -ms-transform: scaleX(1.4) scaleY(1.6);
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -415,6 +414,14 @@ body {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+}
+
+.btn.btn--black:hover {
+  color: #000 !important;
+}
+
+.btn.btn--green:hover {
+  color: #fff !important;
 }
 
 .composition {
@@ -1595,6 +1602,74 @@ ul {
   margin-bottom: 3rem;
 }
 
+.testimonial-card-container {
+  position: relative;
+}
+
+.testimonial-card-container .testimonial-card {
+  width: 100%;
+}
+
+.testimonial-card-container .testimonial-card .card-img {
+  width: 100%;
+}
+
+.testimonial-card-container .testimonial-card .card-img img {
+  width: 100%;
+}
+
+.testimonial-card-container .testimonial-card .testimonial-title {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.testimonial-card-container .testimonial-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: .5rem 4rem;
+  padding-bottom: 2rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3)));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.3) 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.testimonial-card-container .testimonial-card-overlay p {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.testimonial-card-container .testimonial-card-overlay .testimonial-card-title {
+  text-align: left;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.testimonial-card-container .testimonial-card-overlay .testimonial-card-title::after {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  background-image: url(../images/quote-left.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: .9;
+}
+
+.testimonial-card-container .testimonial-card-overlay .testimonial-card-author {
+  text-align: right;
+}
+
 .widgets-bg__dark {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
   background-image: -o-linear-gradient(left top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
@@ -1619,6 +1694,15 @@ ul {
 
 .sidebar-form label {
   color: #fff;
+}
+
+#sidebar-btn {
+  margin: 3rem 0;
+  text-transform: capitalize;
+}
+
+#sidebar-btn:hover {
+  color: #fff !important;
 }
 
 .footer {

@@ -23,3 +23,10 @@
     color: #fff;
   }
 }
+#sidebar-btn {
+  margin: 3rem 0;
+  text-transform: capitalize;
+  &:hover {
+    color: #fff!important;
+  }
+}
