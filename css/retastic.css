@@ -1892,4 +1892,45 @@ main .main-para {
   margin-bottom: 1rem;
 }
 
+.blogs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.blogs-container a {
+  display: block;
+  color: #fff;
+}
+
+.blog {
+  width: 30rem;
+  height: 30rem;
+}
+
+@media (max-width: 56.25em) {
+  .blog {
+    width: auto;
+  }
+}
+
+.blog--img {
+  width: 100%;
+  height: 80%;
+}
+
+.blog--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.blog--title {
+  text-decoration: none;
+  font-size: #fff;
+  margin: 1rem 0;
+}
+
 /*# sourceMappingURL=retastic.css.map */
