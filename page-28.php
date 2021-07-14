@@ -41,7 +41,7 @@
 
       </div>
       <div class="col-1-of-3">
-
+        <!-- sidebar testimonial card -->
         <?php while($loop->have_posts() ) : $loop->the_post(); ?>
 
           <div class="testimonial-card-container">
@@ -65,6 +65,33 @@
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
 
+        <!-- sidebar blogs list card -->
+        <?php
+          $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'ASC',
+            'posts_per_page' => 5,
+          );
+
+          $loop = new WP_Query( $args );
+
+         ?>
+        <div class="blog-list-container">
+          <h3 class="heading__tertiary">Our Latest Blogs</h3>
+          <ul>
+            <?php while($loop->have_posts() ) : $loop->the_post(); ?>
+              <li class="blog-list-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            <?php endwhile; ?>
+          </ul>
+          <?php wp_reset_postdata(); ?>
+        </div>
+
+        <a href="/blogs" class="btn btn--black" id="sidebar-btn">View All blogs</a>
+
+
+        <!-- sidebar Form -->
         <?php echo do_shortcode("[fluentform id='2']"); ?>
 
 

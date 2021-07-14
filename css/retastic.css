@@ -1607,6 +1607,19 @@ ul {
   color: #fff !important;
 }
 
+.blog-list-container {
+  padding: 2rem;
+  border: 1px solid silver;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.blog-list-container ul {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+}
+
 .footer {
   background-color: rgba(0, 0, 0, 0.99);
   text-align: center;
