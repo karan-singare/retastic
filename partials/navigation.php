@@ -1,9 +1,9 @@
 <header class="navigation-header">
   <div class="row">
     <nav>
-      <div class="logo-box">
-        <a href="/"><img src="<?php echo get_template_directory_uri() . '/images/logo.png';  ?>" alt="Logo"></a>
-      </div>
+      <a href="/" class="logo-box">
+        <img src="<?php echo get_template_directory_uri() . '/images/logo.png';  ?>" alt="Logo">
+      </a>
 
       <div class="navbar-navigation">
         <?php

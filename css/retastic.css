@@ -1841,8 +1841,6 @@ main .main-para {
 }
 
 .single .row {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   /*general elements*/
 }
 
@@ -1860,7 +1858,6 @@ main .main-para {
 
 .single .row img {
   display: inline-block;
-  margin: 1rem 0;
 }
 
 .single .row ul {
@@ -1902,23 +1899,23 @@ main .main-para {
   color: #fff;
 }
 
-.blog {
+.blogs-container .blog {
   width: 30rem;
   height: 30rem;
 }
 
 @media (max-width: 56.25em) {
-  .blog {
+  .blogs-container .blog {
     width: auto;
   }
 }
 
-.blog--img {
+.blogs-container .blog--img {
   width: 100%;
   height: 80%;
 }
 
-.blog--img img {
+.blogs-container .blog--img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1927,7 +1924,7 @@ main .main-para {
   object-position: center;
 }
 
-.blog--title {
+.blogs-container .blog--title {
   text-decoration: none;
   font-size: #fff;
   margin: 1rem 0;

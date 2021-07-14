@@ -29,30 +29,31 @@
     display: block;
     color: #fff;
   }
-}
 
-.blog {
-  width: 30rem;
-  height: 30rem;
+  .blog {
+    width: 30rem;
+    height: 30rem;
 
-  @include respond(tab-port) {
-    width: auto;
-  }
+    @include respond(tab-port) {
+      width: auto;
+    }
 
-  &--img {
-    width: 100%;
-    height: 80%;
-     img {
+    &--img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-     }
+      height: 80%;
+       img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+       }
+    }
+
+    &--title {
+      text-decoration: none;
+      font-size: #fff;
+      margin: 1rem 0;
+    }
   }
 
-  &--title {
-    text-decoration: none;
-    font-size: #fff;
-    margin: 1rem 0;
-  }
 }
