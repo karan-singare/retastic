@@ -3,6 +3,7 @@
 -->
 <?php get_header(); ?>
 
+<?php get_template_part('partials/navigation'); ?>
 <?php get_template_part('partials/slider'); ?>
 
 <?php
@@ -50,7 +51,7 @@
         <?php echo do_shortcode("[fluentform id='2']"); ?>
       </div>
 
-      
+
 
 
 

@@ -42,7 +42,6 @@ jQuery(document).ready(function($) {
    * Adding custom classes for content of the service pages
    */
   $('.page .service .content h2').addClass('heading__secondary');
-  // console.log($('.page .service .content '));
 
   if (location.pathname === '/' || location.pathname === '/contact-us/') {
 
