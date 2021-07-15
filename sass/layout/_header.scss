@@ -1,5 +1,6 @@
 .header {
   height: 95vh;
+  color: #fff;
   background-image: linear-gradient(
     to right bottom,
     rgba(transparent, 0.6),
@@ -32,5 +33,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+
+  .heading__primary {
+    &--main {
+      margin-bottom: 2rem;
+    }
   }
 }

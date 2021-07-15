@@ -15,21 +15,21 @@
     <?php if ($id == 93 || $id == 89 || $id == 16): ?>
     <?php $count++; ?>
     <div class="col-1-of-3">
-      <a href="<?php the_permalink(); ?>" target="_blank" alt="<?php the_title_attribute(); ?>">
-        <div class="custom-card">
-          <div class="custom-card__side custom-card__side--front">
-            <div class="custom-card__picture custom-card__picture--<?php echo $count; ?>">
-              &nbsp;
-            </div>
-            <h4 class="custom-card__heading">
-              <span class="custom-card__heading-span custom-card__heading-span--<?php echo $count; ?>"><?php the_title(); ?></span>
-            </h4>
-            <div class="custom-card__details">
-              <?php the_excerpt(); ?>
-            </div>
+      <div class="custom-card">
+        <div class="custom-card__side custom-card__side--front">
+          <div class="custom-card__picture custom-card__picture--<?php echo $count; ?>">
+            &nbsp;
+          </div>
+          <h4 class="custom-card__heading">
+            <span class="custom-card__heading-span custom-card__heading-span--<?php echo $count; ?>"><?php the_title(); ?></span>
+          </h4>
+          <div class="custom-card__details">
+            <?php the_excerpt(); ?>
           </div>
         </div>
-      </a>
+        <a class="btn-text read-more-btn" href="<?php the_permalink(); ?>" target="_blank" alt="<?php the_title_attribute(); ?>">Read more...</a>
+      </div>
+
     </div>
 
     <?php endif; ?>

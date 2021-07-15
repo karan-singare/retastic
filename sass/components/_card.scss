@@ -1,5 +1,4 @@
 .custom-card {
-  //FUNCTIONALITY
   perspective: 115rem;
   position: relative;
 
@@ -39,15 +38,6 @@
       }
     }
   }
-
-  /* when we hover the card apply css to card__side */
-  /* .card:hover .card__side */
-  // &:hover &__side--front {
-  //   transform: rotateY(-180deg);
-  // }
-  // &:hover &__side--back {
-  //   transform: rotateY(0);
-  // }
 
   //FRONT SIDE STYLING
   &__picture {
@@ -176,21 +166,13 @@
       font-size: 4rem;
     }
   }
+
+  //FUNCTIONALITY
+  .read-more-btn {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
 }
-/**
- * persective make the div appear as if it is coming out of the palne towards the viewer
- * we have to apply perscepective in the parent div of element whose transform we are doing
- * lower the number of perspective more dramatic the effect is
- */
-
-/**
- * while breaking the natural flow content either by using absolute positioning or float
- * we come out of the plane thus the parent div looses height
- * we need to use the clearfix to fix this in case of float
- * but there is no such things for positioning and hence we have to give the exact smae height
- * the parent div manually
- */
-
-/**
- * blend mode of background are properties which defines how the different background images are blended
- */
