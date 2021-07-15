@@ -304,7 +304,6 @@ body {
 
 .btn {
   /*when button is clicked*/
-  /* style will applied to after element when the btn is hovered*/
 }
 
 .btn, .btn:link, .btn:visited {
@@ -1450,6 +1449,12 @@ body {
   font-size: 1.6rem;
 }
 
+@media (max-width: 37.5em) {
+  .service {
+    padding: 3rem;
+  }
+}
+
 .service .heading__secondary {
   font-size: 2.4rem;
 }
@@ -1492,15 +1497,13 @@ ul {
 }
 
 .testimonials {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/stories-bg.jpg");
-  background-image: -o-linear-gradient(left top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/stories-bg.jpg");
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/stories-bg.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .testimonials .story {
   margin-bottom: 3rem;
+  background-color: rgba(0, 0, 0, 0.99);
 }
 
 .testimonial-card-container {
@@ -1608,9 +1611,9 @@ ul {
 
 .blog-list-container {
   padding: 2rem;
-  border: 1px solid silver;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .blog-list-container ul {
@@ -1870,6 +1873,10 @@ main .main-para {
   margin-bottom: 0 !important;
 }
 
+.contact-us .paragraph {
+  font-size: 1.8rem;
+}
+
 .single .row {
   /*general elements*/
 }
@@ -1955,9 +1962,12 @@ main .main-para {
 }
 
 .blogs-container .blog--title {
-  text-decoration: none;
-  font-size: #fff;
+  color: #000;
   margin: 1rem 0;
+}
+
+.blogs-container .blog--title:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=retastic.css.map */

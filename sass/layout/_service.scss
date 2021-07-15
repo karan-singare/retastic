@@ -3,6 +3,10 @@
   padding-bottom: 3rem;
   font-size: 1.6rem;
 
+  @include respond(phone) {
+    padding: 3rem;
+  }
+
   .heading__secondary {
     font-size: 2.4rem;
     &:hover {
@@ -41,18 +45,14 @@ ul {
 }
 
 .testimonials {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(transparent, 0.6),
-    rgba(transparent, 0.6)),
-  url('../images/stories-bg.jpg');
   background-size: cover;
   background-position: center;
 
   .story {
     margin-bottom: 3rem;
+    background-color: rgba(0 , 0, 0, .99);
   }
-  
+
 }
 
 .testimonial-card-container {
