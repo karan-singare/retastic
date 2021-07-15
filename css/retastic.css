@@ -1625,15 +1625,33 @@ ul {
 }
 
 .footer {
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.99);
   text-align: center;
-  font-size: 1.8rem;
-  padding: 10rem 0;
+  font-size: 1.4rem;
+  padding: 5rem 0;
+}
+
+@media (max-width: 75em) {
+  .footer {
+    padding: 5rem 3rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .footer {
+    text-align: left;
+  }
 }
 
 .footer__copyright {
   display: inline-block;
-  margin: 5rem 0;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.footer__copyright a {
+  color: #7ed56f;
 }
 
 .page-header {
@@ -1651,7 +1669,7 @@ ul {
 
 @media (max-width: 56.25em) {
   .section-about {
-    padding: 20rem 0;
+    padding: 20rem 3rem;
   }
 }
 
@@ -1742,9 +1760,9 @@ ul {
 
 @media (max-width: 56.25em) {
   .book {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.18)), to(rgba(0, 0, 0, 0.18)));
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.18)), to(rgba(0, 0, 0, 0.18))), url("../images/form-1.jpg");
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%), url("../images/form-1.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%), url("../images/form-1.jpg");
     background-size: cover;
   }
 }

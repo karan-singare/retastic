@@ -5,7 +5,7 @@
   margin-top: -20vh;
 
   @include respond(tab-port) {
-    padding: 20rem 0;
+    padding: 20rem 3rem;
   }
 }
 
@@ -103,7 +103,8 @@
   @include respond(tab-port) {
     background-image: linear-gradient( to right,
       rgba($color-black, .18) 0%,
-      rgba($color-black, .18) 100%);
+      rgba($color-black, .18) 100%),
+      url('../images/form-1.jpg');
     background-size: cover;
   }
 
