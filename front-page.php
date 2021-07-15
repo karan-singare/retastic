@@ -9,7 +9,6 @@
       <?php get_template_part('partials/blogs') ?>
       <?php get_template_part('partials/stories') ?>
       <?php get_template_part('partials/contact') ?>
-      <?php //get_template_part('partials/footer') ?>
 
    </main>
 

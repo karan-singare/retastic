@@ -7,15 +7,22 @@
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: transform .3s;
-  height: 36rem;
+  height: 26rem;
 
   color: $color-white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(transparent, 0.6),
+    rgba(transparent, 0.6)),
+  url('../images/about-1.jpg');
+
   @include respond(tab-port) {
     padding: 2rem;
+    font-size: 1.8rem;
   }
 
   /*here the icon is a font icon so font properties will be applicable on it,*/

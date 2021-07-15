@@ -529,17 +529,21 @@ body {
   -o-transition: transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-  height: 36rem;
+  height: 26rem;
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../images/about-1.jpg");
+  background-image: -o-linear-gradient(left top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/about-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/about-1.jpg");
   /*here the icon is a font icon so font properties will be applicable on it,*/
 }
 
 @media (max-width: 56.25em) {
   .feature-box {
     padding: 2rem;
+    font-size: 1.8rem;
   }
 }
 
