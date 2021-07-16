@@ -4,7 +4,20 @@
 <?php get_header(); ?>
 
 <?php get_template_part('partials/navigation'); ?>
-<?php //get_template_part('partials/slider'); ?>
+
+<?php
+  $title = 'Contact Us';
+  $description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+  $slider_name = 'residential';
+
+  $slider =  create_slider($title, $description, $slider_name);
+
+ ?>
+
+<?php echo $slider; ?>
+
+
+
 <?php
 /**
 * Setup query to show the testimonial’

@@ -144,38 +144,42 @@ add_action('widgets_init', 'retastic_widget_setup');
 /**
  * Helper functions
  */
+ function create_slider($title, $description, $slider_name, $button = ['link' => '/blogs', 'text' => 'Recent Blogs']) {
+  $path = './wp-content/themes/retastic/images/slider/' . $slider_name;
 
-function create_testimonial_sidebar_card() {
-  $args = array(
-    'post_type' => 'testimonial',
-    'post_status' => 'publish',
-    'orderby' => 'date',
-    'order' => 'ASC',
-    'posts_per_page' => 1,
-  );
+  if (is_dir($path)) {
+    $images = scandir($path);
+    $images = array_diff(scandir($path), array('.', '..'));
 
-  $loop = new WP_Query( $args );
-  $output = "";
+    $slider = '<div class="slider">';
 
-  // while($loop->have_posts()) {
-  //   echo "hello";
-  // }
+    $checked = 'checked';
+    $btn_link = $button['link'];
+    $btn_text = $button['text'];
 
-  while ($loop->have_posts()) {
-    $url = the_post_thumbnail_url();
-    $author = the_excerpt();
-    $title = the_title();
-    $output = "
-      <div class='sidebar-testimonial'>
-        <img src='$url' alt='' />
-        <p>$title</p>
-        <p>$author</p>
+    foreach ($images as $image) {
+      $image = $path . '/' . $image;
+      $image = substr($image, 1);
+
+      $slider .= "
+      <input type='radio' name='slider' $checked />
+      <div class='slider--img-container'>
+      <img src='$image' alt='' />
+      <div class='slider--content'>
+      <h2>$title</h2>
+      <p>$description</p>
+      <a href='$btn_link' class='btn--black'>$btn_text</a>
       </div>
-    ";
+      </div>
+      ";
+
+      $checked = '';
+    }
+
+    $slider .= '</div>';
+
+    return $slider;
   }
 
-  wp_reset_postdata();
 
-  return $output;
-
-}
+ }

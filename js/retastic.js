@@ -53,4 +53,25 @@ jQuery(document).ready(function($) {
     $('div[class*="fluentform_wrapper_"]').html(fluentform_wrapper_content);
   }
 
+  /**
+   * Automatic sliding of the slides
+   */
+  setInterval(() => {
+    const inputs = $('.slider input[type="radio"]');
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked === true) {
+        inputs[i].checked = false;
+
+        if (i < inputs.length-1) {
+          inputs[i+1].checked = true;
+        } else {
+          inputs[0].checked = true;
+        }
+        break;
+      }
+    }
+  }, 4000);
+
+
+
 });
