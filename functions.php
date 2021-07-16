@@ -181,5 +181,26 @@ add_action('widgets_init', 'retastic_widget_setup');
     return $slider;
   }
 
-
  }
+
+function create_banner($title, $img_url) {
+  print $title . '<br />';
+  print $image_url . '<br />';
+
+  if (is_file($img_url)) {
+    $slider = '<div class="slider">';
+
+    $slider .= "
+    <div class='slider--img-container'>
+    <img src='$img_url' alt='' />
+    <div class='slider--content'>
+    <h2>$title</h2>
+    </div>
+    </div>
+    ";
+
+    $slider .= '</div>';
+
+    return $slider;
+  }
+}

@@ -5,6 +5,10 @@
 
 <?php get_template_part('partials/navigation'); ?>
 
+<div class="slider"></div>
+
+
+
 <?php
 /**
 * Setup query to show the testimonial’
@@ -32,7 +36,24 @@
           <?php $count=0; while( have_posts() ): the_post(); $count++; ?>
 
             <div class="content">
+
+              <div id="banner-content">
+                <input type="radio" name="slider" checked style="display:none;">
+                <div class='slider--img-container'>
+                  <?php if (has_post_thumbnail()): ?>
+                    <img src="<?php echo the_post_thumbnail_url(); ?>">
+                  <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri() . '/images/about-1.jpg'; ?>">
+                  <?php endif; ?>
+
+                  <div class='slider--content'>
+                    <h2><?php the_title(); ?></h2>
+                  </div>
+                </div>
+              </div>
+
               <?php the_content(); ?>
+
             </div>
 
           <?php endwhile; ?>

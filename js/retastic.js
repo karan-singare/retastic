@@ -72,6 +72,9 @@ jQuery(document).ready(function($) {
     }
   }, 4000);
 
-
+  /**
+   * Creating the banner for single blog posts
+   */
+  $('.single-post .slider').html($('#banner-content').html())
 
 });
